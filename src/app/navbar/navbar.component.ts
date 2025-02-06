@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { pageLinks } from 'src/assets/data/data';
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   logo = '/assets/images/logo.svg';
+  pageLinks = pageLinks;
 }

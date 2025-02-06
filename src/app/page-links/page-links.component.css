@@ -1,0 +1,12 @@
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+@media screen and (min-width: 992px) {
+.nav-links {
+    height: auto;
+    display: flex;
+  }
+}
