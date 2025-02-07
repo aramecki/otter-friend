@@ -103,6 +103,11 @@ Variables
     margin-bottom: 1.25rem;
     color: var(--clr-grey-5);
   }
+  label {
+    font-size: 0.875rem;
+    font-weight: 480;
+    text-transform: uppercase;
+  }
   @media screen and (min-width: 800px) {
     h1 {
       font-size: 4rem;
@@ -166,6 +171,10 @@ Variables
     margin: 0 auto;
     max-width: 1170px;
   }
+  .form-group {
+    margin-top: 0.7rem;
+    text-align: end;
+  }
   @media screen and (min-width: 992px) {
     .section-center {
       width: 95vw;
@@ -224,6 +233,37 @@ Variables
     height: 0;
     overflow: hidden;
     transition: var(--transition);
+  }
+  #login {
+    height: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.07rem;
+    transition: var(--transition);
+    font-weight: 480;
+    color: var(--clr-grey-1);
+    width: max-content;
+  }
+  #login:hover {
+    color: var(--clr-primary-8);
+    text-shadow: 0px 0px 1px var(--clr-grey-1);
+  }
+  #signup {
+    height: 0;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.07rem;
+    transition: var(--transition);
+    font-weight: 500;
+    color: var(--clr-grey-1);
+    background-color: var(--clr-primary-8);
+    margin: 1rem;
+    margin-left: 0.5rem;
+    width: max-content;
+  }
+  #signup:hover {
+    color: var(--clr-primary-1);
+    background: var(--clr-primary-8);
+    padding: 0.6rem;
   }
   .show-links {
     height: 280px;
@@ -462,12 +502,11 @@ Variables
   .tour-img {
     height: 15rem;
     object-fit: cover;
-    max-width: fit-content;
   }
   .tour-date {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 0rem;
+    bottom: 0rem;
     background: var(--clr-primary-8);
     color: var(--clr-primary-1);
     text-transform: capitalize;

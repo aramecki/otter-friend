@@ -1,21 +1,21 @@
 <article class='tour-card'>
     <div class='tour-img-container'>
-      <img [src]='tour' class='tour-img' alt='' />
-      <p class='tour-date'>date</p>
+      <img src='{{tourObj.image}}' class='tour-img' alt='' />
+      <p class='tour-date'>{{tourObj.date}}</p>
     </div>
     <div class='tour-info'>
       <div class='tour-title'>
-        <h4>title</h4>
+        <h4>{{tourObj.title}}</h4>
       </div>
       <p>
-        info
+        {{tourObj.info}}
       </p>
       <div class='tour-footer'>
         <p>
-          <span><i class='fas fa-map'></i></span> location
+          <span><i class='fas fa-map'></i></span> {{tourObj.location}}
         </p>
-        <p>duration days</p>
-        <p>from price€</p>
+        <p>{{tourObj.duration}} days</p>
+        <p>from {{tourObj.price}}€</p>
       </div>
     </div>
   </article>
