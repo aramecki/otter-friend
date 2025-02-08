@@ -8,6 +8,6 @@ import { pageLinks } from 'src/assets/data/data';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  logo = '/assets/images/logo.svg';
+  logo = '/assets/images/logo.png';
   pageLinks = pageLinks;
 }

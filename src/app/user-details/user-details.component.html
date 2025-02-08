@@ -1,12 +1,14 @@
-<h3> View User Details</h3>
-<div>
+<section class = "row" style="margin-top: 5rem; text-align: center;">
+    <h3> Dettagli Socio {{user.firstName}} TODO:surname</h3>
     <div>
-        <label> <b> Username: </b></label> {{user.id}}
+        <div>
+            <label> <b> Id: </b></label> {{user.id}}
+        </div>
+        <div>
+            <label> <b> Nome: </b></label> {{user.firstName}}
+        </div>
+        <div>
+            <label> <b> password: </b></label> {{user.password}}
+        </div>
     </div>
-    <div>
-        <label> <b> Username: </b></label> {{user.userName}}
-    </div>
-    <div>
-        <label> <b> password: </b></label> {{user.password}}
-    </div>
-</div>
+</section>

@@ -1,5 +1,9 @@
 export class User {
     id?: number;
-    userName: string;
+    firstName: string;
+    surName: string;
+    birth: string;
+    cardType: string;
+    email: string;
     password: string;
   }

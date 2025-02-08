@@ -21,6 +21,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RedMessageComponent } from './red-message/red-message.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreateUserComponent,
     UpdateUserComponent,
     UserDetailsComponent,
-    UserListComponent
+    UserListComponent,
+    RedMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { HttpClientModule } from '@angular/common/http';
     PageLinksComponent,
     ServiceComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    RedMessageComponent
   ]
 })
 export class AppModule { }

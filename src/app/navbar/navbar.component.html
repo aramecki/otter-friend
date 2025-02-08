@@ -2,25 +2,28 @@
     <nav class='navbar'>
         <div class='nav-center'>
         <div class='nav-header'>
-            <img [src]="logo" class='nav-logo' alt='otter friend' />
+            <img [src]="logo" class='nav-logo' alt='otter friend' style="margin-bottom: 1rem; margin-left: 1.5rem; max-width:150px;"/>
             <button type='button' class='nav-toggle' id='nav-toggle'>
             <i class='fas fa-bars'></i>
             </button>
         </div>
 
         <app-page-links parentClass='nav-links' itemClass='nav-link'/>
-
-            <ul class="nav-icons">
+    
+    
+<!--             <ul class="nav-icons">
                 <li>
                     <a href="/" target='_blank' rel='noreferrer' class="nav-icons">
                         <i class="icon"></i>
                     </a>
                 </li>
-            </ul>
-        </div>
-        <div>
+            </ul> -->
+        
+        <div id="user_container">
             <a routerLink="/login" id="login">Entra</a>
             <a routerLink="/signup" id="signup">Registrati</a>
         </div>
+    </div>
     </nav>
+
 </main>

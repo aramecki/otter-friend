@@ -9,8 +9,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
   {path: '', title: 'Home', component: HomeComponent},
-  {path: 'signup', title: 'Registrati', component: CreateUserComponent},
+  {path: 'signup', title: 'Associati', component: CreateUserComponent},
   {path: 'users', title: 'Lista Associati', component: UserListComponent},
+  {path: 'user-details/:id', title: 'Dettagli Socio', component: UserDetailsComponent},
   /* { path: '**', title: 'Not Found', component: NotFoundComponent}, */
 ];
 

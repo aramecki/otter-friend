@@ -4,18 +4,52 @@
       <form (ngSubmit)="onSubmit()">
 
         <div class="form-group">
-            <label for="username" style="margin-right: 1rem;">Username</label>
-            <input type="text" class="form-control" id="username" [(ngModel)]="user.userName"
-                name="userName">
+            <label for="firstname" style="margin-right: 1rem;">Nome</label>
+            <input type="text" class="form-control" id="firstname" [(ngModel)]="user.firstName"
+                name="firstName">
         </div>
 
         <div class="form-group">
-            <label for="password" style="margin-right: 1rem;">Password</label>
-            <input type="password" class="form-control" id="password" [(ngModel)]="user.password"
-                name="password">
+          <label for="surname" style="margin-right: 1rem;">Cognome</label>
+          <input type="text" class="form-control" id="surname" [(ngModel)]="user.surName"
+              name="surName">
         </div>
 
-        <button class="btn message-btn" style="scale: 0.7; margin-top: 1rem;" type="submit">Submit</button>
+        <div class="form-group">
+          <label for="birth" style="margin-right: 1rem;">Data di nascita</label>
+          <input type="date" class="form-control" id="birth" [(ngModel)]="user.birth"
+              name="birth">
+        </div>
+
+       <div class="form-group">
+        <label for="cardType" style="margin-right: 1rem;">Tipo di Tesseramento</label>
+        <select name="cardType" class="form-select" id="cardType" [(ngModel)]="user.cardType">
+          <option value="red">Rosso</option>
+          <option value="yellow">Giallo</option>
+          <option value="green">Verde</option>
+        </select>
+        <app-red-message [message]="user.cardType"/>
+      </div>
+
+      <div class="form-group">
+        <label for="email" style="margin-right: 1rem;">Email</label>
+        <input type="text" class="form-control" id="email" [(ngModel)]="user.email"
+            name="email">
+      </div>
+
+      <div class="form-group">
+          <label for="password" style="margin-right: 1rem;">Password</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="user.password"
+              name="password">
+      </div>
+
+      <div class="form-group">
+        <label style="margin-right: 1rem;">Ripeti Password</label>
+        <p *ngIf="isPassDiff" class="text-danger animated-text" style="font-size:small; margin-top: 0; margin-bottom: 0; font-weight: 450; letter-spacing: normal; max-width: fit-content;">La password non corrisponde.</p>
+        <input type="password" class="form-control" id="passConfirm">
+      </div>
+
+      <button class="btn message-btn" style="scale: 0.7; margin-top: 1rem;" type="submit">Conferma</button>
 
     </form>
     </div>

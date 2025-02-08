@@ -12,17 +12,17 @@ export const pageLinks = [
     {
         id: 2,
         href: '#about',
-        text: 'about',
+        text: 'chi siamo',
     },
     {
         id: 3,
         href: '#services',
-        text: 'services',
+        text: 'servizi',
     },
     {
         id: 4,
         href: '#tours',
-        text: 'tours',
+        text: 'progetti',
     },
 ];
 
@@ -47,21 +47,21 @@ export const socialLinks = [
 export const services = [
     {
         id: 1,
-        icon:'fas fa-paw fa-fw',
-        title: 'shred your senses',
-        text: 'Wake your inner beast by challenging the nature.',
+        icon:'fas fa-otter fa-fw',
+        title: 'salvare le lontre',
+        text: 'Questo animale sta sparendo dal territorio che un tempo dominava.',
     },
     {
         id: 2,
-        icon:'fas fa-rocket fa-fw',
-        title: 'get your space',
-        text: 'As an explorer everything you see becomes your universe.',
+        icon:'fas fa-tree fa-fw',
+        title: 'difendere il territorio',
+        text: 'Dalla vita di questo animale dipende un intero ecosistema.',
     },
     {
         id: 3,
-        icon:'fas fa-book fa-fw',
-        title: 'write history',
-        text: 'Write world\'s history by living your own.',
+        icon:'fas fa-skull-crossbones fa-fw',
+        title: 'fermare la distruzione',
+        text: 'Attraverso iniziative atte al fornire consapevolezza al cittadino.',
     },
 ];
 
@@ -105,5 +105,20 @@ export const tours = [
         location: 'kenya',
         duration: 20,
         price: 3300,
+    },
+]
+
+export const cards = [
+    {
+        id: 1,
+        text: 'Red message',
+    },
+    {
+        id: 2,
+        text: 'Yellow message',
+    },
+    {
+        id: 3,
+        text: 'Green message',
     },
 ]
