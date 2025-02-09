@@ -26,7 +26,7 @@ export const pageLinks = [
     },
 ];
 
-export const socialLinks = [
+/* export const socialLinks = [
     {
         id: 1,
         href: 'http://www.facebook.com',
@@ -42,7 +42,7 @@ export const socialLinks = [
         href: 'http://www.squarespace.com',
         icon: 'fab fa-squarespace',
     },
-];
+]; */
 
 export const services = [
     {
@@ -105,20 +105,5 @@ export const tours = [
         location: 'kenya',
         duration: 20,
         price: 3300,
-    },
-]
-
-export const cards = [
-    {
-        id: 1,
-        text: 'Red message',
-    },
-    {
-        id: 2,
-        text: 'Yellow message',
-    },
-    {
-        id: 3,
-        text: 'Green message',
     },
 ]

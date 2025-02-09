@@ -52,6 +52,10 @@ Variables
     padding: 0;
     box-sizing: border-box;
   }
+    .default {
+    letter-spacing: 10px;
+    font-weight: 500;
+  }
   html {
     scroll-behavior: smooth;
   }
@@ -62,9 +66,6 @@ Variables
     color: var(--clr-grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
-  }
-  ul {
-    /* list-style-type: none; */
   }
   a {
     text-decoration: none;
@@ -134,7 +135,7 @@ Variables
     }
   }
   /*  global classes */
-  
+
   @keyframes slide-in {
     from {
         opacity: 0;

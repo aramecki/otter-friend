@@ -1,5 +1,5 @@
 <section class="message" id="home">
-    <div class="message-banner">
+    <div class="message-banner" style="width: 40%;">
       <h2>Associati</h2>
       <form (ngSubmit)="onSubmit()">
 
@@ -10,9 +10,9 @@
         </div>
 
         <div class="form-group">
-          <label for="surname" style="margin-right: 1rem;">Cognome</label>
-          <input type="text" class="form-control" id="surname" [(ngModel)]="user.surName"
-              name="surName">
+          <label for="lastname" style="margin-right: 1rem;">Cognome</label>
+          <input type="text" class="form-control" id="lastname" [(ngModel)]="user.lastName"
+              name="lastName">
         </div>
 
         <div class="form-group">
@@ -28,7 +28,7 @@
           <option value="yellow">Giallo</option>
           <option value="green">Verde</option>
         </select>
-        <app-red-message [message]="user.cardType"/>
+        <app-red-message [message]="user.cardType" />
       </div>
 
       <div class="form-group">
@@ -44,12 +44,12 @@
       </div>
 
       <div class="form-group">
-        <label style="margin-right: 1rem;">Ripeti Password</label>
+        <label for="secPassword" style="margin-right: 1rem;">Ripeti Password</label>
         <p *ngIf="isPassDiff" class="text-danger animated-text" style="font-size:small; margin-top: 0; margin-bottom: 0; font-weight: 450; letter-spacing: normal; max-width: fit-content;">La password non corrisponde.</p>
-        <input type="password" class="form-control" id="passConfirm">
+        <input type="password" class="form-control" id="secPassword" [(ngModel)]="user.secPassword" name="secPassword">
       </div>
 
-      <button class="btn message-btn" style="scale: 0.7; margin-top: 1rem;" type="submit">Conferma</button>
+      <button class="btn message-btn" style="scale: 0.7; margin-top: 1rem;" type="submit" [disabled]="!isFormValid()">Conferma</button>
 
     </form>
     </div>

@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'signup', title: 'Associati', component: CreateUserComponent},
   {path: 'users', title: 'Lista Associati', component: UserListComponent},
   {path: 'user-details/:id', title: 'Dettagli Socio', component: UserDetailsComponent},
+  {path: 'update-user/:id', title: 'Dettagli Socio', component: UpdateUserComponent},
   /* { path: '**', title: 'Not Found', component: NotFoundComponent}, */
 ];
 

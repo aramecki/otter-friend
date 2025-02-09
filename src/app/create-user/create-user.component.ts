@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
-import { cards } from 'src/assets/data/data';
 
 @Component({
   selector: 'app-create-user',
@@ -11,17 +10,17 @@ import { cards } from 'src/assets/data/data';
 })
 export class CreateUserComponent implements OnInit {
 
+  
+
   message: string;
 
-  user: User = { firstName: '', surName: '', birth: '', cardType: 'red', email: '', password: '' };
+  user: User = { firstName: '', lastName: '', birth: '', cardType: 'red', email: '', password: '', secPassword: '' };
 
   constructor(private userService: UserService, private router: Router) {}
 
   isPassDiff = false;
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
   saveUser() {
     this.userService.createUser(this.user).subscribe({
@@ -38,33 +37,30 @@ export class CreateUserComponent implements OnInit {
   }
 
   onSubmit() {
-    let passConfirm = document.getElementById('passConfirm') as HTMLInputElement;
+    let secPassword = document.getElementById('secPassword') as HTMLInputElement;
 
-    if (this.user.password !== passConfirm.value) {
-      this.isPassDiff = true;
-      console.log('La password non corrisponde');
+    if (!this.user.firstName.length || !this.user.lastName.length || !this.user.email.length || !this.user.password.length) {
+      console.log('Compilare tutti i campi');
       return;
     }
-    if (this.user.firstName.length <= 0 && this.user.surName.length <= 0 && this.user.email.length <= 0 && this.user.password.length <= 0) {
-      console.log('Compilare tutti gli input');
+    if (this.user.password !== secPassword.value) {
+      this.isPassDiff = true;
+      console.log('La password non corrisponde');
       return;
     }
     console.log('Dati utente prima dell\'invio:', this.user);
     this.saveUser();
   }
 
-/*   onCardTypeChange() {
-    console.log("Opzione selezionata:", this.user.cardType);
-    if (this.user.cardType === 'red') {
-      this.message = cards[0].text;
-      return;
-    } else if (this.user.cardType === 'yellow') {
-      this.message = cards[1].text;
-      return;
-    } else {
-      this.message = cards[2].text;
-      return;
-    }
-  } */
+  isFormValid(): boolean {
+    const birthReg = /^\d{4}-\d{2}-\d{2}$/;
+
+    return this.user.firstName.length > 0 
+      && this.user.lastName.length > 0
+      && birthReg.test(this.user.birth)
+      && this.user.email.includes("@")
+      && this.user.password.length > 0
+      && this.user.secPassword.length > 0;
+  }
 
 }

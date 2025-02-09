@@ -1,5 +1,5 @@
 <section class = "row" style="margin-top: 5rem; text-align: center;">
-    <h3> Dettagli Socio {{user.firstName}} TODO:surname</h3>
+    <app-title title="Dettagli Socio" secTitle="{{user.firstName}} {{user.lastName}}"/>
     <div>
         <div>
             <label> <b> Id: </b></label> {{user.id}}
@@ -8,7 +8,16 @@
             <label> <b> Nome: </b></label> {{user.firstName}}
         </div>
         <div>
-            <label> <b> password: </b></label> {{user.password}}
+            <label> <b> Cognome: </b></label> {{user.lastName}}
+        </div>
+        <div>
+            <label> <b> Data di nascita: </b></label> {{user.birth}}
+        </div>
+        <div>
+            <label> <b> Email: </b></label> {{user.email}}
+        </div>
+        <div>
+            <label> <b> Tesseramento: </b></label> {{user.cardType}}
         </div>
     </div>
 </section>

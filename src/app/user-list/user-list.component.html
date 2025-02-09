@@ -13,18 +13,16 @@
                 <th>Data di Nascita</th>
                 <th>Tessera</th>
                 <th>Email</th>
-                <th>Password</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor = "let user of users" >
                 <td> {{ user.id }} </td>
                 <td> {{ user.firstName }} </td>
-                <td> {{user.surName}} </td>
+                <td> {{user.lastName}} </td>
                 <td>{{user.birth}}</td>
                 <td>{{user.cardType}}</td>
                 <td>{{user.email}}</td>
-                <td> {{ user.password }} </td>
                 <td style="width: 1%; white-space: nowrap; text-align: center;">
                     <button (click)="userDetails(user.id)" class = "btn btn-primary small-btn"> Dettagli</button>
                     <button (click)="updateUser(user.id)" class = "btn btn-primary small-btn"> Modifica</button>
