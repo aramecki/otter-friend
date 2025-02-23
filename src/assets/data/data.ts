@@ -16,8 +16,8 @@ export const pageLinks = [
     },
     {
         id: 3,
-        href: '#services',
-        text: 'servizi',
+        href: 'users',
+        text: 'lista soci',
     },
     {
         id: 4,

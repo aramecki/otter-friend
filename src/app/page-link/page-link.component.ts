@@ -12,8 +12,4 @@ import { Component, Input } from '@angular/core';
 export class PageLinkComponent {
   @Input() link!: { id: number; text: string; href: string };
   @Input() itemClass: string = '';
-
-  ngOnInit() {
-    console.log('ItemClass ricevuto:', this.itemClass);
-  }
 }
