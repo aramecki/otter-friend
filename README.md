@@ -3,6 +3,8 @@ Simple association-like frontend "converted" from React in order to practice on 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
 
+> NOTE: The original React project was part of the "Complete React, Next.js & TypeScript Project Course 2024" on https://johnsmilga.com/
+
 ## How to install
 In order to try the app you have to follow the steps below:
 
@@ -14,4 +16,4 @@ In order to try the app you have to follow the steps below:
  In order to test the association feature you have to start the server from the backend repository too.
 
 ## How to get the server
-You can download or clone the server from:
+You can download or clone the server from: https://github.com/aramecki/otter-friend_be
